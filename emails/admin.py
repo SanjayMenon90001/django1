@@ -9,4 +9,4 @@ class ItemAdmin(admin.ModelAdmin):
     list_filter = ("name",)  # Add a filter sidebar for 'name'
 
 
-admin.site.register(Item, ItemAdmin)
+#admin.site.register(Item, ItemAdmin)

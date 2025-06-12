@@ -19,3 +19,8 @@ class ItemSerializer(serializers.ModelSerializer):
                 "Description must be at least 10 characters long."
             )
         return value
+
+    def validate_email(self, value):
+        if value and not value.endswith("@gmail.com"):
+            raise serializers.ValidationError("Email must be a Gmail address.")
+        return value
